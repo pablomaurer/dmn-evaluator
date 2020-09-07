@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_01hdyjr" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <decision id="decision_set_1" name="Decision Set 1">
+    <decisionTable id="DecisionTable_184v3mw" hitPolicy="COLLECT">
+      <input id="Input_1" label="Age" camunda:inputVariable="age">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1rudu5u" label="Gender" camunda:inputVariable="gender">
+        <inputExpression id="LiteralExpression_0qgkamy" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1tkrrc4" label="Has Grandchildren" camunda:inputVariable="hasGrandchildren">
+        <inputExpression id="LiteralExpression_0194q13" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Result" name="result_set" typeRef="string" />
+      <rule id="DecisionRule_0kafs7f">
+        <inputEntry id="UnaryTests_161hfsj">
+          <text>[18..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_060truy">
+          <text>"m","f"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ykwdhg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07z490z">
+          <text>"adult male or female"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0z452em">
+        <inputEntry id="UnaryTests_1kahfsy">
+          <text>[18..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j7qx1d">
+          <text>"f"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zxae6z">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0piswpt">
+          <text>"grandmother"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09m7f5p">
+        <inputEntry id="UnaryTests_1081x1i">
+          <text>[18..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0soijrk">
+          <text>"m"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x3jgaj">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pd2xyw">
+          <text>"grandfather"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dg6ogg">
+        <inputEntry id="UnaryTests_15t9qk7">
+          <text>[18..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0efid9l">
+          <text>"m","f"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c46g5r">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0koouaq">
+          <text>"adult without grandchildren"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u7oq8y">
+        <inputEntry id="UnaryTests_01ga3f0">
+          <text>&lt;= 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qano2i">
+          <text>"f"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uvexsx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lj6g3b">
+          <text>"girl"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10cy1n9">
+        <inputEntry id="UnaryTests_11hkdaw">
+          <text>&lt;= 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yfwp0f">
+          <text>"m"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h7q6it">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f9kaop">
+          <text>"boy"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decision_set_1">
+        <dc:Bounds height="80" width="180" x="140" y="120" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
