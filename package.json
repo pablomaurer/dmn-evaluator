@@ -1,14 +1,9 @@
 {
   "name": "dmn-evaluater",
   "version": "0.1.1",
-  "description": "Parses and evaluates dnm diagramms in node or the browser.",
-  "author": "Pablo Maurer",
-  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
@@ -27,5 +22,12 @@
     "ts-node": "^9.0.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2"
+  },
+  "description": "Parses and evaluates dnm diagramms in node or the browser.",
+  "author": "Pablo Maurer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pablomaurer/dmn-evaluater"
   }
 }

@@ -16,7 +16,7 @@ Mostly took the logic from https://github.com/HBTGmbH/dmn-eval-js but with a dif
 - Missing configurable logger
 
 ## Usage
-- Look in the example folder
+Look in the example folder
 
 ```ts
 import { evaluateDecision, parseDmnXml } from 'dmn-evaluater';
