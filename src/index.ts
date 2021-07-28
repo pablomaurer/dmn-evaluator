@@ -220,7 +220,11 @@ function evaluateRule(rule, resolvedInputExpressions, outputNames) {
                 inputValue = 'false'
             }
             const inputRule = rule.inputValues[i];
-            const res = unaryTest(inputRule, { '?': inputValue })
+            let context = { '?': inputValue };
+            if (inputRule.includes(resolvedInputExpressions[i].name)) {
+                context[resolvedInputExpressions[i].name] = inputValue;
+            }
+            const res = unaryTest(inputRule, context);
             // console.log('inputRule: ', inputRule, 'inputname: ', resolvedInputExpressions[i].name, 'inputValue: ', inputValue, 'res: ', res);
             if (!res) {
                 return {
